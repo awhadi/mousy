@@ -26,8 +26,11 @@ Everything is controlled from the menu bar icon and a native-style Settings wind
 
 ```bash
 brew tap awhadi/mousy https://github.com/awhadi/mousy
+brew trust awhadi/mousy
 brew install --cask mousy
 ```
+
+Recent Homebrew versions ask you to trust a tap that is not Homebrew's own, which is what `brew trust` does. Older versions don't have that command, so skip that line there.
 
 To update later, Mousy updates itself, or run `brew upgrade --cask mousy`.
 
