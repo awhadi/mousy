@@ -22,8 +22,18 @@ Everything is controlled from the menu bar icon and a native-style Settings wind
 
 ## Install
 
+**Homebrew**
+
+```bash
+brew install --cask awhadi/tap/mousy
+```
+
+To update later, Mousy updates itself, or run `brew upgrade --cask mousy`.
+
+**Download**
+
 1. Download `Mousy.dmg` from the [latest release](https://github.com/awhadi/mousy/releases/latest/download/Mousy.dmg), open it and drag Mousy to Applications. (`Mousy.pkg` is a double-click installer that does the same.)
-2. The first time you open it, macOS may warn that the developer is unidentified. Right-click Mousy, choose **Open**, then **Open** again.
+2. The first time you open it, macOS may warn that the developer is unidentified. Right-click Mousy, choose **Open**, then **Open** again. This applies to the Homebrew install too.
 3. Allow the permissions below when asked.
 
 ### Permissions
