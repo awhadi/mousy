@@ -25,7 +25,8 @@ Everything is controlled from the menu bar icon and a native-style Settings wind
 **Homebrew**
 
 ```bash
-brew install --cask awhadi/tap/mousy
+brew tap awhadi/mousy https://github.com/awhadi/mousy
+brew install --cask mousy
 ```
 
 To update later, Mousy updates itself, or run `brew upgrade --cask mousy`.
