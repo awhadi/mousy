@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mousy for Mac</title>
+<meta name="description" content="Mousy is a menu bar app for macOS that lights up your pointer, shows clicks and keystrokes, and lets you draw on the screen.">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f6f6fb; --surface: #ffffff; --text: #16162a; --muted: #5d5d78; --line: #e4e4f0;
+    --accent: #6c4cff; --accent-text: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0c0c18; --surface: #15152a; --text: #f1f1fa; --muted: #a2a2c0; --line: #26264a; --accent: #8a72ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 56px 20px 40px; }
+  header { text-align: center; }
+  header img { width: 128px; height: 128px; }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 12px 0 6px; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); font-size: 1.15rem; max-width: 34em; margin: 0 auto 26px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .button { display: inline-block; padding: 13px 26px; border-radius: 12px; text-decoration: none; font-weight: 600;
+            background: var(--accent); color: var(--accent-text); }
+  .button.secondary { background: transparent; color: var(--text); border: 1px solid var(--line); }
+  .button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .note { color: var(--muted); font-size: 0.9rem; margin-top: 14px; }
+  h2 { margin: 56px 0 16px; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  ol, ul { padding-left: 1.2em; }
+  li { margin: 6px 0; }
+  code { background: var(--surface); border: 1px solid var(--line); padding: 1px 6px; border-radius: 6px; font-size: 0.9em; }
+  footer { margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem;
+           display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: space-between; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="Mousy app icon" width="128" height="128">
+    <h1>Mousy</h1>
+    <p class="tagline">Present with a spotlight, laser, drawing and keystrokes. A small menu bar app for macOS.</p>
+    <div class="buttons">
+      <a class="button" href="https://github.com/awhadi/mousy/releases/latest/download/Mousy.dmg">Download for Mac</a>
+      <a class="button secondary" href="https://github.com/awhadi/mousy/releases/latest/download/Mousy.pkg">Installer (.pkg)</a>
+    </div>
+    <p class="note">Requires macOS 13 or later · Apple silicon and Intel · <a href="https://github.com/awhadi/mousy/releases/latest">All releases</a></p>
+  </header>
+
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card"><h3>Spotlight</h3><p>Hold a key to dim the screen except for a soft circle around your pointer. Scroll to resize it.</p></div>
+    <div class="card"><h3>Pointer halo</h3><p>A ring or disc around the pointer, with your own border and fill colours.</p></div>
+    <div class="card"><h3>Click effects</h3><p>Aurora, water drop or particle ripples on every click, with separate left and right colours.</p></div>
+    <div class="card"><h3>Keystrokes</h3><p>Shows the shortcuts you press in an on-screen bar, so your audience can follow along.</p></div>
+    <div class="card"><h3>Laser pointer</h3><p>A glowing dot with a smooth trail that replaces the cursor.</p></div>
+    <div class="card"><h3>Draw on screen</h3><p>Pen, lines, arrows and shapes. Rough shapes snap clean, edges can be feathered, and drawings fade away on their own.</p></div>
+  </div>
+
+  <h2>Install</h2>
+  <ol>
+    <li>Download <code>Mousy.dmg</code>, open it and drag Mousy to Applications.</li>
+    <li>The first time, macOS may say the developer is unidentified. Right-click Mousy, choose <strong>Open</strong>, then <strong>Open</strong> again.</li>
+    <li>Allow <strong>Input Monitoring</strong> (for the keystroke display) and <strong>Accessibility</strong> (so right-click works while you draw) when asked.</li>
+  </ol>
+  <p class="note">Mousy checks for updates once a day and can install them for you. You can turn this off in About.</p>
+
+  <footer>
+    <span>© 2026 AWHADI Studio. All rights reserved.</span>
+    <span><a href="mailto:support@awhadi.online">support@awhadi.online</a> · <a href="https://github.com/awhadi/mousy">GitHub</a></span>
+  </footer>
+</main>
+</body>
+</html>
